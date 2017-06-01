@@ -1,0 +1,14 @@
+C:\Work\ShootingBoots\ShootingBoots\bin\Debug\ShootingBoots.dll
+C:\Work\ShootingBoots\ShootingBoots\bin\Debug\ShootingBoots.pdb
+C:\Work\ShootingBoots\ShootingBoots\bin\Debug\ShootingBoots.dll.mdb
+C:\Work\ShootingBoots\ShootingBoots\bin\Debug\ShootingBoots.ShootingBoots.apk
+C:\Work\ShootingBoots\ShootingBoots\bin\Debug\ShootingBoots.ShootingBoots-Signed.apk
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\ShootingBoots.csprojResolveAssemblyReference.cache
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\ShootingBoots.dll
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\ShootingBoots.pdb
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\android\bin\ShootingBoots.ShootingBoots.apk
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\res\layout\main.xml
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\res\values\strings.xml
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\res\drawable\icon.png
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\R.cs.flag
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\uploadflags.txt
