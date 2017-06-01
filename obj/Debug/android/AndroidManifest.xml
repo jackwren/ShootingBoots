@@ -2,12 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="ShootingBoots.ShootingBoots" android:versionCode="1" android:versionName="1.0">
   <uses-sdk android:minSdkVersion="11" />
   <application android:label="ShootingBoots" android:icon="@drawable/icon" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:configChanges="keyboardHidden|orientation" android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="ShootingBoots" android:name="md5030d07ace5e2d117666d6e24bf3628c7.MainActivity">
+    <activity android:icon="@drawable/icon" android:label="ShootingBoots" android:name="md5030d07ace5e2d117666d6e24bf3628c7.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="MainGame" android:name="md5030d07ace5e2d117666d6e24bf3628c7.MainGame" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="ShootingBoots.ShootingBoots.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>

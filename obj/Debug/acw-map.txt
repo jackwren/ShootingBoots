@@ -2,7 +2,7 @@ ShootingBoots.MainActivity, ShootingBoots;md5030d07ace5e2d117666d6e24bf3628c7.Ma
 ShootingBoots.MainActivity, ShootingBoots, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5030d07ace5e2d117666d6e24bf3628c7.MainActivity
 ShootingBoots.MainActivity;md5030d07ace5e2d117666d6e24bf3628c7.MainActivity
 shootingboots.MainActivity;md5030d07ace5e2d117666d6e24bf3628c7.MainActivity
-ShootingBoots.GLView1, ShootingBoots;md5030d07ace5e2d117666d6e24bf3628c7.GLView1
-ShootingBoots.GLView1, ShootingBoots, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5030d07ace5e2d117666d6e24bf3628c7.GLView1
-ShootingBoots.GLView1;md5030d07ace5e2d117666d6e24bf3628c7.GLView1
-shootingboots.GLView1;md5030d07ace5e2d117666d6e24bf3628c7.GLView1
+ShootingBoots.MainGame, ShootingBoots;md5030d07ace5e2d117666d6e24bf3628c7.MainGame
+ShootingBoots.MainGame, ShootingBoots, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5030d07ace5e2d117666d6e24bf3628c7.MainGame
+ShootingBoots.MainGame;md5030d07ace5e2d117666d6e24bf3628c7.MainGame
+shootingboots.MainGame;md5030d07ace5e2d117666d6e24bf3628c7.MainGame

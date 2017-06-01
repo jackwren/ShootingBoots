@@ -1,7 +1,7 @@
 package md5030d07ace5e2d117666d6e24bf3628c7;
 
 
-public class MainActivity
+public class MainGame
 	extends android.app.Activity
 	implements
 		mono.android.IGCUserPeer
@@ -11,15 +11,15 @@ public class MainActivity
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"";
-		mono.android.Runtime.register ("ShootingBoots.MainActivity, ShootingBoots, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MainActivity.class, __md_methods);
+		mono.android.Runtime.register ("ShootingBoots.MainGame, ShootingBoots, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MainGame.class, __md_methods);
 	}
 
 
-	public MainActivity () throws java.lang.Throwable
+	public MainGame () throws java.lang.Throwable
 	{
 		super ();
-		if (getClass () == MainActivity.class)
-			mono.android.TypeManager.Activate ("ShootingBoots.MainActivity, ShootingBoots, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+		if (getClass () == MainGame.class)
+			mono.android.TypeManager.Activate ("ShootingBoots.MainGame, ShootingBoots, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

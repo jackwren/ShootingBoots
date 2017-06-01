@@ -4,28 +4,52 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:actionBarNavMode="list"
     android:minWidth="25px"
-    android:minHeight="25px">
-    <TextView
-        android:text="Shooting Boots"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="60.1dp"
-        android:id="@+id/title"
-        android:layout_marginTop="15.0dp"
-        android:layout_marginBottom="75.6dp"
-        android:layout_marginRight="20.0dp"
-        android:layout_marginLeft="20.0dp"
-        android:textSize="40" />
-    <Button
-        android:text="Play"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/playButton" />
-    <Button
-        android:text="Leaderboards"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/leaderboardButton" />
+    android:minHeight="25px"
+    android:background="@drawable/backImage1">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/BackGroundLayout">
+        <Button
+            android:text="Play"
+            android:layout_width="200.0dp"
+            android:layout_height="60.0dp"
+            android:id="@+id/button1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="260.0dp"
+            android:onClick="playbuttonClick" />
+        <Button
+            android:text="Leaderboards"
+            android:layout_width="200.0dp"
+            android:layout_height="60.0dp"
+            android:id="@+id/button2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="340.0dp"
+            android:layout_below="@id/button1" />
+        <Button
+            android:text="Shop"
+            android:layout_width="200.0dp"
+            android:layout_height="60.0dp"
+            android:layout_below="@id/button2"
+            android:id="@+id/button3"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="420.0dp" />
+        <TextView
+            android:text="Shooting Boots"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="70px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/button1"
+            android:id="@+id/textView1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="140.0dp" />
+    </RelativeLayout>
 </LinearLayout>

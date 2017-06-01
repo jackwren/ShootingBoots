@@ -12,3 +12,5 @@ C:\Work\ShootingBoots\ShootingBoots\obj\Debug\res\values\strings.xml
 C:\Work\ShootingBoots\ShootingBoots\obj\Debug\res\drawable\icon.png
 C:\Work\ShootingBoots\ShootingBoots\obj\Debug\R.cs.flag
 C:\Work\ShootingBoots\ShootingBoots\obj\Debug\uploadflags.txt
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\res\drawable\backimage1.jpg
+C:\Work\ShootingBoots\ShootingBoots\obj\Debug\res\layout\game.xml

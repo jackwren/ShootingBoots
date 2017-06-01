@@ -11,36 +11,28 @@ namespace ShootingBoots
 {
     [Activity(Label = "ShootingBoots",
         MainLauncher = true,
-        Icon = "@drawable/icon",
-        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.KeyboardHidden
-#if __ANDROID_11__
-		,HardwareAccelerated=false
-#endif
+        Icon = "@drawable/icon"
         )]
     public class MainActivity : Activity
     {
-        GLView1 view;
-
+  
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Create our OpenGL view, and display it
-            view = new GLView1(this);
-            SetContentView(view);
+            SetContentView(Resource.Layout.Main);
+
+            Button button1 = FindViewById<Button>(Resource.Id.button1);
+            button1.Click += playbuttonClick;
+
         }
 
-        protected override void OnPause()
+        public void playbuttonClick(object sender, EventArgs e)
         {
-            base.OnPause();
-            view.Pause();
+            Intent intent = new Intent(this, typeof(MainGame));
+            StartActivity(intent);
         }
 
-        protected override void OnResume()
-        {
-            base.OnResume();
-            view.Resume();
-        }
     }
 }
 

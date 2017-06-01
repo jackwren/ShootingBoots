@@ -3,5 +3,6 @@
   <PropertyGroup>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <SelectedDevice>MonoForAndroid_API_12</SelectedDevice>
+    <AndroidDesignerPreferredTheme>Theme.Wallpaper.NoTitleBar.Fullscreen</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
