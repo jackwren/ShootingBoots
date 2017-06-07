@@ -20,19 +20,30 @@ namespace ShootingBoots
         {
             base.OnCreate(bundle);
 
+            //Set Content to Main page
             SetContentView(Resource.Layout.Main);
 
-            Button button1 = FindViewById<Button>(Resource.Id.button1);
-            button1.Click += playbuttonClick;
+            //Create button press instance
+            Button playButton = FindViewById<Button>(Resource.Id.button1);
+            playButton.Click += PlaybuttonClick;
 
+            Button leaderboardButton = FindViewById<Button>(Resource.Id.button2);
+            leaderboardButton.Click += LeaderboardbuttonClick;
+           
         }
 
-        public void playbuttonClick(object sender, EventArgs e)
+        //Creates methods for opening new pages
+        public void PlaybuttonClick(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(MainGame));
             StartActivity(intent);
         }
-
+        public void LeaderboardbuttonClick(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(MainLeaderboard));
+            StartActivity(intent);
+        }
+       
     }
 }
 

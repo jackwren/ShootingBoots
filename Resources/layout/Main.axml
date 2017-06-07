@@ -21,7 +21,10 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="260.0dp"
-            android:onClick="playbuttonClick" />
+            android:onClick="PlaybuttonClick"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="40px" />
         <Button
             android:text="Leaderboards"
             android:layout_width="200.0dp"
@@ -30,7 +33,11 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="340.0dp"
-            android:layout_below="@id/button1" />
+            android:onClick="LeaderboardbuttonClick"
+            android:layout_below="@id/button1"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="40px" />
         <Button
             android:text="Shop"
             android:layout_width="200.0dp"
@@ -39,17 +46,9 @@
             android:id="@+id/button3"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="420.0dp" />
-        <TextView
-            android:text="Shooting Boots"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="70px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/button1"
-            android:id="@+id/textView1"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="140.0dp" />
+            android:layout_marginTop="420.0dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="40px" />
     </RelativeLayout>
 </LinearLayout>
