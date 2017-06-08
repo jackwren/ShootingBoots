@@ -22,6 +22,20 @@ namespace ShootingBoots
             // Create your application here
             SetContentView(Resource.Layout.Leaderboard);
 
+            //TABLE STILL NEEDS WORK (Default values)
+            SetContentView(Resource.Layout.Table_L);
+            
+            //Call Set High Score
+            //SetHighScore();
+
         }
+
+        public void SetHighScore()
+        {
+            //Template method to set SetHighscore
+            //Connect to Main Game, get count etc
+            //use Linq?
+        }
+
     }
 }

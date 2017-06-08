@@ -22,25 +22,4 @@
             android:layout_marginTop="120.0dp"
             android:layout_marginLeft="140.0dp" />
     </RelativeLayout>
-    <TableLayout
-        android:background="#FFFFFF"
-        android:minWidth="250px"
-        android:minHeight="250px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableLayout1"
-        android:layout_marginBottom="346.5dp">
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:text="Player Name">
-        </TableRow>
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:text="High Score">
-        </TableRow>
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:text="Last Score">
-        </TableRow>
-    </TableLayout>
 </LinearLayout>
