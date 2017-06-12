@@ -23,7 +23,7 @@ namespace ShootingBoots
             SetContentView(Resource.Layout.Leaderboard);
 
             //TABLE STILL NEEDS WORK (Default values)
-            SetContentView(Resource.Layout.Table_L);
+            //SetContentView(Resource.Layout.Table_L);
             
             //Call Set High Score
             //SetHighScore();

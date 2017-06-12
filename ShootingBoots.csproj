@@ -81,7 +81,9 @@
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\drawable\backImage1.jpg" />
     <AndroidResource Include="Resources\drawable\gameBackground.gif" />
-    <AndroidResource Include="Resources\layout\Table_L.xml" />
+    <AndroidResource Include="Resources\layout\Table_L.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
