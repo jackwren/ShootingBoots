@@ -10,56 +10,49 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
+using Android.Graphics.Drawables;
+using Android.Graphics.Drawables.Shapes;
 
 namespace ShootingBoots
 {
     [Activity(Label = "MainGame")]
     public class MainGame : Activity
     {
+        
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            //Set Content to Game Page
-            SetContentView(Resource.Layout.Game);
-
-            Ball newBall = new Ball();
-            //newBall.DrawEllipseInt(e);
-
-            //Home Button instance
-            Button homeBtn = FindViewById<Button>(Resource.Id.button1);
-            homeBtn.Click += goHome;
+            //Draw Ball
+            SetContentView(new MyOvalShape(this));
 
         }
-
-        //Home button method
-        public void goHome(object sender, EventArgs e)
-        {
-            Intent intent = new Intent(this, typeof(MainActivity));
-            StartActivity(intent);
-        }
-        
+      
     }
 
-    public class Ball {
+    public class MyOvalShape : View
+    {
+        public ShapeDrawable _shape;
 
-        int xPosition = 100;
-        int yPosition = 300;
-        int width = 200;
-        int height = 100;
+        public MyOvalShape(Context context) : base(context)
+        {
+            var paint = new Paint();
+            paint.SetARGB(255, 200, 255, 0);
+            paint.SetStyle(Paint.Style.Stroke);
+            paint.StrokeWidth = 4;
 
+            _shape = new ShapeDrawable(new OvalShape());
+            _shape.Paint.Set(paint);
 
-        //Need to create function for displaying ball
-        //private void DrawEllipseInt(PaintEventArgs e)
-        //{
-        //    // Create pen.
-        //    Pen blackPen = new Pen(Color.Black, 3);
+            _shape.SetBounds(200, 200, 300, 200);
+           
+        }
 
-        //    // Draw ellipse to screen.
-        //    e.Graphics.DrawEllipse(blackPen, xPosition, yPosition, width, height);
-        //}
-
-
+        protected override void OnDraw(Canvas canvas)
+        {
+            _shape.Draw(canvas);
+        }
     }
 
 }
