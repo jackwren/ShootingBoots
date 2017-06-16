@@ -17,27 +17,62 @@ using Android.Graphics.Drawables.Shapes;
 namespace ShootingBoots
 {
     [Activity(Label = "MainGame")]
-    public class MainGame : Activity
+    public class MainGame : Activity, GestureDetector.IOnGestureListener
     {
-        
+        private GestureDetector _gestureDetector;
+        private MyOvalShape myView;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             //Draw Ball
             SetContentView(new MyOvalShape(this));
-      
+            _gestureDetector = new GestureDetector(this);
+
         }
 
-        //public boolean onTouch(View v, MotionEvent event) {
+        public override bool OnTouchEvent(MotionEvent e) {
 
-             //Create method to take user touch on screen
-             //Need to find if they have touched the area of the ball
-             //If so increase top and bottom position by 200 etc
+            _gestureDetector.OnTouchEvent(e);
+            return false;
           
-        //}
+        }
 
-      
+        public bool OnDown(MotionEvent e)
+        {
+            return false;
+        }
+
+        public bool OnFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)
+        {
+           
+            myView.top =+ 100;
+            myView.bottom =+ 100;
+
+            return true;
+        }
+
+        public void OnLongPress(MotionEvent e)
+        {
+            
+        }
+
+        public bool OnScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY)
+        {
+            return false;
+        }
+
+        public void OnShowPress(MotionEvent e)
+        {
+            
+        }
+
+        public bool OnSingleTapUp(MotionEvent e)
+        {
+            return false;
+        }
+
     }
 
     public class MyOvalShape : View
@@ -47,7 +82,6 @@ namespace ShootingBoots
         public int bottom = 1000;
         public int right = 450;
         public int left = 350;
-
 
         public MyOvalShape(Context context) : base(context)
         {
@@ -60,14 +94,14 @@ namespace ShootingBoots
             _shape.Paint.Set(paint);
 
             _shape.SetBounds(left, top, right, bottom);
-            
-           
+
         }
 
         protected override void OnDraw(Canvas canvas)
         {
             _shape.Draw(canvas);
         }
+
     }
 
 }
