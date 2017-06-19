@@ -20,22 +20,29 @@ namespace ShootingBoots
     public class MainGame : Activity, GestureDetector.IOnGestureListener
     {
         private GestureDetector _gestureDetector;
-        private MyOvalShape myView;
+        private MyOvalShape _ball;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             //Draw Ball
-            SetContentView(new MyOvalShape(this));
+            SetContentView(new MyOvalShape(this, 900, 1000));
             _gestureDetector = new GestureDetector(this);
+            _ball = new MyOvalShape(this, 900, 1000);
 
         }
 
         public override bool OnTouchEvent(MotionEvent e) {
 
             _gestureDetector.OnTouchEvent(e);
-            return false;
+            var top_C = _ball.topP - 50;
+            var bottom_C = _ball.bottomP -50;
+
+            _ball = new MyOvalShape(this, top_C, bottom_C);
+            _ball.Invalidate();
+
+            return true;
           
         }
 
@@ -46,10 +53,6 @@ namespace ShootingBoots
 
         public bool OnFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)
         {
-           
-            myView.top =+ 100;
-            myView.bottom =+ 100;
-
             return true;
         }
 
@@ -78,14 +81,16 @@ namespace ShootingBoots
     public class MyOvalShape : View
     {
         public ShapeDrawable _shape;
-        public int top = 900;
-        public int bottom = 1000;
+        public int topP;
+        public int bottomP;
         public int right = 450;
         public int left = 350;
 
-        public MyOvalShape(Context context) : base(context)
+        public MyOvalShape(Context context, int top, int bottom) : base(context)
         {
             var paint = new Paint();
+            topP = top;
+            bottomP = bottom;
             paint.SetARGB(255, 200, 255, 200);
             paint.SetStyle(Paint.Style.Stroke);
             paint.StrokeWidth = 4;
