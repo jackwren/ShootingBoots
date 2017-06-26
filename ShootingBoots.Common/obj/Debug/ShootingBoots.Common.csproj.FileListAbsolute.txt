@@ -1,0 +1,8 @@
+C:\Users\jackw\Documents\ShootingBoots\ShootingBoots.Common\bin\Debug\ShootingBoots.Common.dll
+C:\Users\jackw\Documents\ShootingBoots\ShootingBoots.Common\bin\Debug\ShootingBoots.Common.pdb
+C:\Users\jackw\Documents\ShootingBoots\ShootingBoots.Common\bin\Debug\box2d.dll
+C:\Users\jackw\Documents\ShootingBoots\ShootingBoots.Common\bin\Debug\CocosSharp.dll
+C:\Users\jackw\Documents\ShootingBoots\ShootingBoots.Common\bin\Debug\MonoGame.Framework.dll
+C:\Users\jackw\Documents\ShootingBoots\ShootingBoots.Common\obj\Debug\ShootingBoots.Common.csprojResolveAssemblyReference.cache
+C:\Users\jackw\Documents\ShootingBoots\ShootingBoots.Common\obj\Debug\ShootingBoots.Common.dll
+C:\Users\jackw\Documents\ShootingBoots\ShootingBoots.Common\obj\Debug\ShootingBoots.Common.pdb
