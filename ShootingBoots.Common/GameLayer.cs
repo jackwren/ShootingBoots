@@ -19,9 +19,8 @@ namespace ShootingBoots.Common
         int score;
         bool doesUserTouchBall = false;
 
-        public GameLayer() : base(CCColor4B.Black)
+        public GameLayer() : base(CCColor4B.White)
         {
-
             var touchListener = new CCEventListenerTouchAllAtOnce();
             touchListener.OnTouchesEnded = OnTouchesEnded;
             
@@ -31,13 +30,13 @@ namespace ShootingBoots.Common
             AddChild(ballSprite);
 
             scoreLabel = new CCLabel("Score: 0", "Arial", 20, CCLabelFormat.SystemFont);
+            scoreLabel.Color = CCColor3B.Black;
             scoreLabel.PositionX = 50;
             scoreLabel.PositionY = 1000;
             scoreLabel.AnchorPoint = CCPoint.AnchorUpperLeft;
             AddChild(scoreLabel);
 
             Schedule(RunGameLogic);
-
 
         }
 
@@ -55,7 +54,9 @@ namespace ShootingBoots.Common
             if (doesUserTouchBall && isMovingDownward)
             {
                 // First let's invert the velocity:
-                ballYVelocity *= -1;
+                var fallSpeed = 1.2;
+
+                ballYVelocity *= - Convert.ToSingle(fallSpeed);
                 // Then let's assign a random to the ball's x velocity:
                 const float minXVelocity = -300;
                 const float maxXVelocity = 300;
