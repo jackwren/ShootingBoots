@@ -2,6 +2,9 @@
 using CocosSharp;
 using System;
 using System.Linq;
+using Android.Widget;
+using Android.App;
+using ShootingBoots;
 
 namespace ShootingBoots.Common
 {
@@ -12,12 +15,19 @@ namespace ShootingBoots.Common
 
         float ballXVelocity;
         float ballYVelocity;
+        float ballYMin;
+        float ballXMin;
+        float ballXMax;
+        float ballYMax;
 
         // How much to modify the ball's y velocity per second:
         const float gravity = 140;
 
         int score;
         bool doesUserTouchBall = false;
+        bool sendBallLeft = false;
+        bool sendBallRight = false;
+        bool ballGoesBelow = false;
 
         public GameLayer() : base(CCColor4B.White)
         {
@@ -29,12 +39,27 @@ namespace ShootingBoots.Common
             ballSprite.PositionY = 600;
             AddChild(ballSprite);
 
-            scoreLabel = new CCLabel("Score: 0", "Arial", 20, CCLabelFormat.SystemFont);
-            scoreLabel.Color = CCColor3B.Black;
-            scoreLabel.PositionX = 50;
-            scoreLabel.PositionY = 1000;
-            scoreLabel.AnchorPoint = CCPoint.AnchorUpperLeft;
-            AddChild(scoreLabel);
+            //If ball goes below bottom window, game over reset
+            if (ballGoesBelow == true)
+            {
+                //Finish the game
+                scoreLabel = new CCLabel("GAME OVER", "Arial", 45, CCLabelFormat.SystemFont);
+                scoreLabel.Color = CCColor3B.Black;
+                scoreLabel.PositionX = 500;
+                scoreLabel.PositionY = 500;
+                scoreLabel.AnchorPoint = CCPoint.AnchorUpperLeft;
+                AddChild(scoreLabel);
+
+            }
+            else
+            {
+                scoreLabel = new CCLabel("Score: 0", "Arial", 20, CCLabelFormat.SystemFont);
+                scoreLabel.Color = CCColor3B.Black;
+                scoreLabel.PositionX = 50;
+                scoreLabel.PositionY = 1000;
+                scoreLabel.AnchorPoint = CCPoint.AnchorUpperLeft;
+                AddChild(scoreLabel);
+            }
 
             Schedule(RunGameLogic);
 
@@ -54,13 +79,37 @@ namespace ShootingBoots.Common
             if (doesUserTouchBall && isMovingDownward)
             {
                 // First let's invert the velocity:
-                var fallSpeed = 1.2;
+                var fallSpeed = 1;
 
                 ballYVelocity *= - Convert.ToSingle(fallSpeed);
-                // Then let's assign a random to the ball's x velocity:
-                const float minXVelocity = -300;
-                const float maxXVelocity = 300;
-                ballXVelocity = CCRandom.GetRandomFloat(minXVelocity, maxXVelocity);
+
+                //Rework this so depends where you touch ball goes in x direction
+                if (sendBallLeft == true)
+                {
+                    //Send ball left
+                    const float minXVelocity_Left = -300;
+                    const float maxXVelocity_Left = -100;
+                    ballXVelocity = CCRandom.GetRandomFloat(minXVelocity_Left, maxXVelocity_Left);
+
+                    sendBallLeft = false;
+
+                }
+                else if (sendBallRight == true)
+                {
+                    //Send ball right
+                    const float minXVelocity_Right = 100;
+                    const float maxXVelocity_Right = 300;
+                    ballXVelocity = CCRandom.GetRandomFloat(minXVelocity_Right, maxXVelocity_Right);
+
+                    sendBallRight = false;
+                }
+                else
+                {
+                    //Send the ball directly up
+                    const float minXVelocity_Up = -25;
+                    const float maxXVelocity_Up = 25;
+                    ballXVelocity = CCRandom.GetRandomFloat(minXVelocity_Up, maxXVelocity_Up);
+                }
 
                 // DisplayScore:
                 score++;
@@ -86,6 +135,13 @@ namespace ShootingBoots.Common
             {
                 ballXVelocity *= -1;
             }
+
+            if (ballSprite.PositionY > VisibleBoundsWorldspace.MinY)
+            {
+                ballGoesBelow = true;
+            }
+            
+
         }
 
         protected override void AddedToScene()
@@ -113,18 +169,37 @@ namespace ShootingBoots.Common
             int touchY = Convert.ToInt32(location.Y);
 
             //Ball limits for touch, max above x and below
-            var ballXMin = (ballSprite.PositionX - 25);
-            var ballXMax = (ballSprite.PositionX + 25);
+            ballXMin = (ballSprite.PositionX - 25);
+            ballXMax = (ballSprite.PositionX + 25);
             //... same for y
-            var ballYMin = (ballSprite.PositionY - 25);
-            var ballYMax = (ballSprite.PositionY + 25);
+            ballYMin = (ballSprite.PositionY - 25);
+            ballYMax = (ballSprite.PositionY + 25);
 
+
+            //If user touches the ball within the range of the ball object make it jump
             if (Enumerable.Range(Convert.ToInt32(ballXMin), Convert.ToInt32(ballXMax)).Contains(touchX) &&
                     Enumerable.Range(Convert.ToInt32(ballYMin), Convert.ToInt32(ballYMax)).Contains(touchY) &&
                     touches.Count > 0){
 
                         doesUserTouchBall = true;
             }
+
+            //If the ball is less than the max X and more than the median X
+            //So we touch the ball on the right hand side
+            if (touchX > (Convert.ToInt32(ballXMin) + 15) && touchX < Convert.ToInt32(ballXMax))
+            {
+                //Send the ball in left x direction
+                sendBallLeft = true;
+            }
+
+            //If the ball is greater than the min X and less than the median X
+            //So we touch the ball on the left hand side
+            if (touchX < (Convert.ToInt32(ballXMin) + 15) && touchX > Convert.ToInt32(ballXMin))
+            {
+                //Send the ball in a right x direction
+                sendBallRight = true;
+            }
+
         }
 
         void HandleTouchesMoved(System.Collections.Generic.List<CCTouch> touches, CCEvent touchEvent)

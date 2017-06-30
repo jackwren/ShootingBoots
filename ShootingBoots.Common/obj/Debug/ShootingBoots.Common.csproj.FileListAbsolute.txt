@@ -14,3 +14,6 @@ C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots.Common\bin\Debug\Mon
 C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots.Common\obj\Debug\ShootingBoots.Common.csprojResolveAssemblyReference.cache
 C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots.Common\obj\Debug\ShootingBoots.Common.dll
 C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots.Common\obj\Debug\ShootingBoots.Common.pdb
+C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots.Common\bin\Debug\Mono.Android.dll
+C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots.Common\bin\Debug\Mono.Android.pdb
+C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots.Common\bin\Debug\Mono.Android.xml
