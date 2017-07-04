@@ -11,7 +11,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:icon="@drawable/icon" android:label="MainGame.Android" android:launchMode="singleInstance" android:screenOrientation="portrait" android:name="md5030d07ace5e2d117666d6e24bf3628c7.MainGame">
+    <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:icon="@drawable/icon" android:launchMode="singleInstance" android:screenOrientation="portrait" android:name="md5030d07ace5e2d117666d6e24bf3628c7.MainGame">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

@@ -135,7 +135,7 @@ namespace ShootingBoots.Common
                 ballXVelocity *= -1;
             }
 
-            if (ballSprite.PositionY > VisibleBoundsWorldspace.MinY)
+            if (ballSprite.PositionY > 1050)
             {
                 ballGoesBelow = true;
             }

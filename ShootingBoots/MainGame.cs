@@ -8,7 +8,7 @@ using Android.Content.PM;
 
 namespace ShootingBoots
 {
-    [Activity(Label = "MainGame.Android",
+    [Activity(
         MainLauncher = true,
         Icon = "@drawable/icon",
         AlwaysRetainTaskState = true,
