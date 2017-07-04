@@ -4,7 +4,6 @@ using System;
 using System.Linq;
 using Android.Widget;
 using Android.App;
-using ShootingBoots;
 
 namespace ShootingBoots.Common
 {

@@ -78,3 +78,4 @@ C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots\bin\Debug\ShootingBo
 C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots\obj\Debug\android\assets\OpenTK.dll.mdb
 C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots\obj\Debug\android\assets\ShootingBoots.Common.dll.mdb
 C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots\obj\Debug\android\assets\ShootingBoots.dll.mdb
+C:\Users\jackw\Documents\github\ShootingBoots\ShootingBoots\obj\Debug\res\drawable\home_button.xml

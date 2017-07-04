@@ -105,6 +105,7 @@
     <AndroidResource Include="Resources\drawable\gameBackground.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\home_button.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShootingBoots.Common\ShootingBoots.Common.csproj">

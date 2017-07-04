@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>22/06/2017 16:33:06</xs:documentation>
+    <xs:documentation>04/07/2017 16:13:37</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -82,6 +82,7 @@
       <xs:element ref="HorizontalScrollView" />
       <xs:element ref="SearchView" />
       <xs:element ref="fragment" />
+      <xs:element ref="CocosSharp.CCGameView" />
       <xs:element ref="opentk_1_0.platform.android.AndroidGameView" />
       <xs:element ref="opentk_1_0.GameViewBase" />
       <xs:element ref="include" />
@@ -1389,6 +1390,16 @@
     <xs:attribute ref="android:layout_marginStart" />
     <xs:attribute ref="android:layout_marginEnd" />
     <xs:attribute ref="android:style" />
+  </xs:complexType>
+  <xs:element name="CocosSharp.CCGameView" type="CocosSharp.CCGameView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: CocosSharp.CCGameView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="CocosSharp.CCGameView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="SurfaceView" />
+    </xs:complexContent>
   </xs:complexType>
   <xs:element name="opentk_1_0.platform.android.AndroidGameView" type="opentk_1_0.platform.android.AndroidGameView">
     <xs:annotation>

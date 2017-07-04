@@ -30,7 +30,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="260.0dp"
             android:onClick="PlaybuttonClick"
-            android:background="@android:color/white"
+            android:background="@drawable/home_button"
             android:textColor="@android:color/black"
             android:textSize="40px" />
         <Button
@@ -43,7 +43,7 @@
             android:layout_marginTop="340.0dp"
             android:onClick="LeaderboardbuttonClick"
             android:layout_below="@id/button1"
-            android:background="@android:color/white"
+            android:background="@drawable/home_button"
             android:textColor="@android:color/black"
             android:textSize="40px" />
         <Button
@@ -55,7 +55,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="420.0dp"
-            android:background="@android:color/white"
+            android:background="@drawable/home_button"
             android:textColor="@android:color/black"
             android:textSize="40px" />
     </RelativeLayout>
