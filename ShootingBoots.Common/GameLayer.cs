@@ -20,7 +20,7 @@ namespace ShootingBoots.Common
         float ballYMax;
 
         // How much to modify the ball's y velocity per second:
-        const float gravity = 140;
+        const float gravity = 180;
 
         int score;
         bool doesUserTouchBall = false;
@@ -32,10 +32,14 @@ namespace ShootingBoots.Common
         {
             var touchListener = new CCEventListenerTouchAllAtOnce();
             touchListener.OnTouchesEnded = OnTouchesEnded;
-            
+
+            Random rnd = new Random();
+            int rndX = rnd.Next(250, 400);
+            int rndY = rnd.Next(550, 700);
+
             ballSprite = new CCSprite("ball");
-            ballSprite.PositionX = 320;
-            ballSprite.PositionY = 600;
+            ballSprite.PositionX = rndX;
+            ballSprite.PositionY = rndY;
             AddChild(ballSprite);
 
             //If ball goes below bottom window, game over reset
